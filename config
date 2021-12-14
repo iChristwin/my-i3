@@ -184,3 +184,12 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Custom config
+#
+# Launch rofi for apps and files
+bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
+
+# exec guake-terminal and wallpaper selector
+exec --no-startup-id guake
+exec bash ~/.config/i3/wallpaper.sh
