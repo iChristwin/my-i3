@@ -122,40 +122,40 @@ bindsym Mod1+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws1 "F1rst "
+set $ws2 "2erminal "
+set $ws3 "Brows3r "
+set $ws4 "Edi4or "
+set $ws5 "Mu5ic "
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "O8S "
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "H0me "
 
 # switch to workspace
-bindsym Mod1+1 workspace number $ws1
-bindsym Mod1+2 workspace number $ws2
-bindsym Mod1+3 workspace number $ws3
-bindsym Mod1+4 workspace number $ws4
-bindsym Mod1+5 workspace number $ws5
-bindsym Mod1+6 workspace number $ws6
-bindsym Mod1+7 workspace number $ws7
-bindsym Mod1+8 workspace number $ws8
-bindsym Mod1+9 workspace number $ws9
-bindsym Mod1+0 workspace number $ws10
+bindsym Mod1+1 workspace $ws1
+bindsym Mod1+2 workspace $ws2
+bindsym Mod1+3 workspace $ws3
+bindsym Mod1+4 workspace $ws4
+bindsym Mod1+5 workspace $ws5
+bindsym Mod1+6 workspace $ws6
+bindsym Mod1+7 workspace $ws7
+bindsym Mod1+8 workspace $ws8
+bindsym Mod1+9 workspace $ws9
+bindsym Mod1+0 workspace $ws10
 
 # move focused container to workspace
-bindsym Mod1+Shift+1 move container to workspace number $ws1
-bindsym Mod1+Shift+2 move container to workspace number $ws2
-bindsym Mod1+Shift+3 move container to workspace number $ws3
-bindsym Mod1+Shift+4 move container to workspace number $ws4
-bindsym Mod1+Shift+5 move container to workspace number $ws5
-bindsym Mod1+Shift+6 move container to workspace number $ws6
-bindsym Mod1+Shift+7 move container to workspace number $ws7
-bindsym Mod1+Shift+8 move container to workspace number $ws8
-bindsym Mod1+Shift+9 move container to workspace number $ws9
-bindsym Mod1+Shift+0 move container to workspace number $ws10
+bindsym Mod1+Shift+1 move container to workspace $ws1
+bindsym Mod1+Shift+2 move container to workspace $ws2
+bindsym Mod1+Shift+3 move container to workspace $ws3
+bindsym Mod1+Shift+4 move container to workspace $ws4
+bindsym Mod1+Shift+5 move container to workspace $ws5
+bindsym Mod1+Shift+6 move container to workspace $ws6
+bindsym Mod1+Shift+7 move container to workspace $ws7
+bindsym Mod1+Shift+8 move container to workspace $ws8
+bindsym Mod1+Shift+9 move container to workspace $ws9
+bindsym Mod1+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
@@ -215,8 +215,8 @@ exec compton -f
 gaps inner 10
 gaps outer 0
 
-bindsym Mod1+shift+x exec reboot
-bindsym Mod1+shift+z exec shutdown
+bindsym Mod1+Shift+x exec reboot
+bindsym Mod1+Shift+z exec shutdown
 
 for_window [class="^.*"] border pixel 0
 
@@ -247,40 +247,8 @@ bar {
     }
 }
 
-set $workspace10 "H0me "
-set $workspace1 "F1rst "
-set $workspace4 "Edi4or "
-set $workspace3 "Brows3r "
-set $workspace2 "2erminal "
-set $workspace5 "Mu5ic "
-set $workspace8 "O8S "
-
-# switch to workspace
-bindsym Mod1+1 workspace $workspace1
-bindsym Mod1+2 workspace $workspace2
-bindsym Mod1+3 workspace $workspace3
-bindsym Mod1+4 workspace $workspace4
-bindsym Mod1+5 workspace $workspace5
-bindsym Mod1+6 workspace 6
-bindsym Mod1+7 workspace 7
-bindsym Mod1+8 workspace $workspace8
-bindsym Mod1+9 workspace 9
-bindsym Mod1+0 workspace $workspace10
-
-# move focused container to workspace
-bindsym Mod1+Shift+1 move container to workspace $workspace1
-bindsym Mod1+Shift+2 move container to workspace $workspace2
-bindsym Mod1+Shift+3 move container to workspace $workspace3
-bindsym Mod1+Shift+4 move container to workspace $workspace4
-bindsym Mod1+Shift+5 move container to workspace $workspace5
-bindsym Mod1+Shift+6 move container to workspace 6
-bindsym Mod1+Shift+7 move container to workspace 7
-bindsym Mod1+Shift+8 move container to workspace $workspace8
-bindsym Mod1+Shift+9 move container to workspace 9
-bindsym Mod1+Shift+0 move container to workspace $workspace10
 
 bindsym Mod1+Ctrl+b exec brightness-controller
-bindsym Mod1+Ctrl exec rofi -show run
 
 # exec_always feh --bg-scale ~/Pictures/wallpapers/photo-1635548567882-659a2ae68752.jpg
 
@@ -290,4 +258,6 @@ bindsym F1 exec --no-startup-id rofi -show drun -show-icons
 # exec guake-terminal and wallpaper selector
 exec --no-startup-id guake
 exec bash ~/.config/i3/wallpaper.sh
+
+
 
