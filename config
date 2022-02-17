@@ -212,13 +212,8 @@ exec i3-config-wizard
 #
 #
 
-exec compton -f
-
 gaps inner 10
 gaps outer 0
-
-bindsym $mod+Shift+x exec reboot
-bindsym $mod+Shift+z exec shutdown
 
 for_window [class="^.*"] border pixel 0
 
@@ -238,7 +233,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 
 bar {
     position top
-        status_command i3blocks
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
     colors {
         background $bg-color
             separator #757575
@@ -250,16 +245,16 @@ bar {
 }
 
 
-bindsym $mod+Ctrl+b exec brightness-controller
-
 # exec_always feh --bg-scale ~/Pictures/wallpapers/photo-1635548567882-659a2ae68752.jpg
 
-# Launch rofi for apps and files
-bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
 
-# exec guake-terminal and wallpaper selector
 exec --no-startup-id guake
 exec bash ~/.config/i3/wallpaper.sh
+exec compton -f
 
-
+bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
+bindsym $mod+Shift+x exec reboot
+bindsym $mod+Shift+z exec shutdown
+bindsym $mod+Ctrl+b exec brightness-controller
+bindsym $mod+x exec i3lock
 
