@@ -124,16 +124,28 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "F1rst "
-set $ws2 "2erminal "
-set $ws3 "Brows3r "
-set $ws4 "Edi4or "
-set $ws5 "Mu5ic "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "O8S "
-set $ws9 "9"
-set $ws10 "H0me "
+#set $ws1 "F1rst "
+#set $ws2 "2erminal "
+#set $ws3 "Brows3r "
+#set $ws4 "Edi4or "
+#set $ws5 "Mu5ic "
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "O8S "
+#set $ws9 "9"
+#set $ws10 "H0me "
+
+
+set $ws1 "##"
+set $ws2 "YOU"
+set $ws3 "MUST"
+set $ws4 "BE"
+set $ws5 "THIS"
+set $ws6 "TALL"
+set $ws7 "TO"
+set $ws8 "RIDE"
+set $ws9 "THIS"
+set $ws10 "RIDE"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -251,6 +263,8 @@ bar {
 exec --no-startup-id guake
 exec bash ~/.config/i3/wallpaper.sh
 exec compton -f
+exec /usr/bin/prime-offload
+exec optimus-manager-qt
 
 bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
 bindsym $mod+Shift+x exec reboot
