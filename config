@@ -265,7 +265,8 @@ exec bash ~/.config/i3/wallpaper.sh
 exec compton -f
 exec /usr/bin/prime-offload
 exec optimus-manager-qt
-exec bash ~/Apps/reset.sh
+exec flameshot
+# exec bash ~/Apps/reset.sh
 
 bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
 bindsym $mod+Shift+x exec reboot
