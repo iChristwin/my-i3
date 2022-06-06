@@ -266,11 +266,15 @@ exec compton -f
 exec /usr/bin/prime-offload
 exec optimus-manager-qt
 exec flameshot
+exec cbatticon -u 7 -i -r 10 -x "poweroff" -l 25
+exec blueman-applet
 # exec bash ~/Apps/reset.sh
 
 bindsym F1 exec --no-startup-id rofi -show drun -show-icons 
 bindsym $mod+Shift+x exec reboot
-bindsym $mod+Shift+z exec shutdown
+bindsym $mod+Shift+z exec shutdown now
 bindsym $mod+Ctrl+b exec brightness-controller
 bindsym $mod+x exec i3lock
 
+
+# exec_always feh --bg-fill /home/ichristwin/Downloads/1-c69a06afcbf54ee0a6a4454c39c5388a.jpg
